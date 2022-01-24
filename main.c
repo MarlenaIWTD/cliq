@@ -108,8 +108,8 @@ while(1)
 					}
 				else
 				TPM0_SetVal(wynik); //jesli tryb 2 to po prostu przepisuje wartosc z ADC do PWM
-				}
 			}
+		}
 	}
 }
 
