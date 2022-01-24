@@ -28,11 +28,9 @@ void buttonsInitialize(void){
 	PORTB->PCR[BUT2] |= PORT_PCR_MUX(1);				
 
 	
-	PORTB->PCR[BUT1] |=  PORT_PCR_PE_MASK |	
-											 PORT_PCR_PS_MASK;	    
+	PORTB->PCR[BUT1] |=  PORT_PCR_PE_MASK |	PORT_PCR_PS_MASK;	    
 	PORTB->PCR[BUT1] |= 	PORT_PCR_IRQC(10);		
-	PORTB->PCR[BUT2] |=  PORT_PCR_PE_MASK |		
-											 PORT_PCR_PS_MASK;			
+	PORTB->PCR[BUT2] |=  PORT_PCR_PE_MASK |		PORT_PCR_PS_MASK;			
 	PORTB->PCR[BUT2] |=  PORT_PCR_IRQC(10);
 
 	NVIC_ClearPendingIRQ(myPORT_IRQn);				
