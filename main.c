@@ -97,7 +97,7 @@ while(1)
 					x_grav = ((double)((int16_t)((arrayXYZ[0]<<8)|arrayXYZ[1])>>2)/4096);
 					grav = x_grav*x_grav + y_grav*y_grav;  					
 						//wartosc acc zalezna od zmiennej color, poniewaz swiatlo zamontowane z tylu lub przodu ma inny zwrot osi Z			
-					if(acc>0.4 && grav > 0.9) //wartosc progowa od ktorej rozpoznawane jest hamowanie oraz gdy w wypadkowy wektor z XY jest wiekszy od 0.9 (sqrt(0.4*0.4+0.9) > 1)
+					if(acc>0.5 && grav > 0.8) //wartosc progowa od ktorej rozpoznawane jest hamowanie oraz gdy w wypadkowy wektor z XY jest wiekszy od 0.8 (sqrt(0.5*0.5+0.8) > 1)
 					{	TPM0_SetVal(wynik);
 						delay_ms(100/acc); //im wieksze hamowanie tym czesciej miga
 						TPM0_SetVal(1);
